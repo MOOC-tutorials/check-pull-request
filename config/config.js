@@ -14,7 +14,13 @@ exports.getConfig = function(repoName){
         const config = yaml.safeLoad(data);
         return config;
       } catch(err){
-        return {}; 
+        return {invalidMessage: '',
+                invalidExtensionMessage: '',
+                mergeMessage: '',
+                validations: [],
+                validFileExtensions: [],
+                supportedOperations: [],
+                invalidOperationMessage: ''}; 
       }
     }
 };
