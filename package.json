@@ -1,0 +1,41 @@
+{
+  "name": "check-pull-request-merge",
+  "version": "0.1.0",
+  "description": "Check that a pull-request can be merge",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "lib"
+  ],
+  "scripts": {
+    "start": "probot run ./index.js",
+    "test": "jest test/* && npm run lint",
+    "test:watch": "DEBUG=octokitz:rest* jest test/* --watch --notify --notifyMode=change --coverage",
+    "lint": "standard --fix",
+    "semantic-release": "semantic-release"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "repository": "https://github.com/mooc-tutorials/check-pull-requests",
+  "keywords": [
+    "probot"
+  ],
+  "author": "Daniel Althviz",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "probot": "^9.0.1",
+    "jsdom": "^15.2.1"
+  },
+  "devDependencies": {
+    "@octokit/rest": "^15.9.4",
+    "jest": "^23.4.0",
+    "nock": "^9.4.2",
+    "standard": "^12.0.1"
+  },
+  "engines": {
+    "node": "^8"
+  }
+}

@@ -1,0 +1,24 @@
+invalidMessage: Los cambios propuestos no cumplen con los elementos mínimos requeridos.
+invalidExtensionMessage: Se han agregado o editado archivos que no cumplen con la extensión requerida.
+invalidOperationMessage: Los cambios realizan operaciones sobre los archivos inválidas.
+mergeMessage: Cambios aceptados. Muchas gracias por la contribución.
+validFileExtensions:
+- .html
+supportedOperations:
+- added
+validations:
+- type: DOM
+  fileExtension: .html
+  expectedValues:
+  - querySelector: "#titulo"
+    attribute: textContent
+    exists: true
+  - querySelector: "#imagen"
+    attribute: src
+    exists: true
+  - querySelector: "#enlace"
+    attribute: href
+    exists: true
+  - querySelector: "#enlace"
+    attribute: textContent
+    exists: true
